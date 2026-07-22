@@ -1,0 +1,36 @@
+name: Feature request
+description: Suggest an improvement or new capability
+title: "[Suggestion] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the [Roadmap](../../blob/main/ROADMAP.md) and
+        [existing issues](../../issues?q=is%3Aissue+label%3Aenhancement) first — if it's already
+        there, a 👍 on the existing issue counts for a lot.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the situation or workflow where the app falls short — the problem, more than the solution.
+      placeholder: I keep folders of NDJSON logs next to my notes and would like to read them in the data viewer…
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to see?
+      description: Your idea of a good solution, if you have one. Sketches, examples, and comparisons to other tools all welcome.
+    validations:
+      required: false
+  - type: dropdown
+    id: importance
+    attributes:
+      label: How much does this matter to you?
+      options:
+        - Nice to have
+        - Would use it regularly
+        - Blocking — I can't use the app well without it
+    validations:
+      required: false
