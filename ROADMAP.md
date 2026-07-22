@@ -40,6 +40,7 @@ Roughly in the order we're thinking about them — nothing here is scheduled.
 ## How releases work
 
 - **Microsoft Store** installs update automatically.
-- **Direct downloads** (MSI / NSIS / standalone exe) are signed and published per release on the
-  [Releases](../../releases) page; check there for new versions.
+- **Direct downloads** (MSI / NSIS setup exe) are signed and published per release on the
+  [Releases](../../releases) page and at [iasols.io](https://www.iasols.io/downloads/); check
+  there for new versions.
 - Versioning is semantic: patch releases fix and polish, minor releases add capability.

@@ -56,9 +56,15 @@ to an existing issue instead; it genuinely influences prioritization.
 **[Microsoft Store](https://apps.microsoft.com/detail/REPLACE-WITH-STORE-PRODUCT-ID)** (recommended):
 one-click install with automatic updates.
 
-Prefer a direct download? Signed Windows installers (MSI, NSIS, and a self-contained standalone
-`.exe`) are published on this repository's [**Releases**](../../releases) page — the installers
-register the `.md` file association and the Explorer Preview Pane.
+**Direct download — v1.3.3.** Signed installers; both register the `.md` file association and the
+Explorer Preview Pane:
+
+| Package | GitHub | iasols.io |
+|---|---|---|
+| MSI installer | [Download](../../releases/download/v1.3.3/Sentinel-Markdown_1.3.3_x64_en-US.msi) | [Download](https://www.iasols.io/downloads/Sentinel-Markdown_1.3.3_x64_en-US.msi) |
+| Setup exe (NSIS) | [Download](../../releases/download/v1.3.3/Sentinel-Markdown_1.3.3_x64-setup.exe) | [Download](https://www.iasols.io/downloads/Sentinel-Markdown_1.3.3_x64-setup.exe) |
+
+All versions, with release notes, are on the [**Releases**](../../releases) page.
 
 ## Writing Markdown that renders well
 
