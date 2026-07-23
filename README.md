@@ -8,7 +8,7 @@ Renders a folder of Markdown the way VS Code's preview does — tables, Mermaid 
 live charts, math — but **confined to that folder**: no access elsewhere on disk, and **no network**
 in the render path. Safe to point at anything.
 
-[![Get it from the Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-Get%20the%20app-0067b8?logo=microsoft&logoColor=white)](https://apps.microsoft.com/detail/REPLACE-WITH-STORE-PRODUCT-ID)
+[![Get it from the Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-Get%20the%20app-0067b8?logo=microsoft&logoColor=white)](https://apps.microsoft.com/detail/xpfcktgcf2f8dz)
 ![platform](https://img.shields.io/badge/platform-Windows-444)
 [![license](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
 
@@ -53,7 +53,7 @@ to an existing issue instead; it genuinely influences prioritization.
 
 ## Install
 
-**[Microsoft Store](https://apps.microsoft.com/detail/REPLACE-WITH-STORE-PRODUCT-ID)** (recommended):
+**[Microsoft Store](https://apps.microsoft.com/detail/xpfcktgcf2f8dz)** (recommended):
 one-click install with automatic updates.
 
 **Direct download — v1.3.3.** Signed installers; both register the `.md` file association and the
