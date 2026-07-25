@@ -74,6 +74,43 @@ KaTeX math (`$$…$$`), and inline or relatively-referenced SVG. What is deliber
 safety: raw HTML/JS, `<script>` tags, remote images, and anything that would need the network.
 Blocks that can't run render harmlessly as code.
 
+### Teach your AI to write for this reader
+
+If you generate Markdown with an AI assistant, install the **`markdown-visuals`** agent skill. It
+tells the assistant which primitives this reader renders — so you get a Mermaid diagram or a
+`chart` block instead of a Chart.js widget that gets stripped.
+
+It follows the open [Agent Skills](https://agentskills.io) format, so it works in Claude Code,
+Claude Cowork, and any other agent that supports the standard.
+
+- 📦 **[Download the skill](../../raw/main/skills/markdown-visuals.zip)** (ZIP) · browse the source
+  in [`skills/markdown-visuals/`](skills/markdown-visuals/SKILL.md)
+
+**Claude Cowork, or the Claude desktop and web apps** — upload the ZIP as-is; don't unzip it:
+
+1. Open **Customize** in the left sidebar, then the **Skills** tab.
+2. Click **+**, then **Create skill → Upload a skill**.
+3. Select `markdown-visuals.zip`.
+
+**Claude Code** — unzip so the `markdown-visuals` folder lands in a skills directory:
+
+| Scope | Location |
+|---|---|
+| Every project (personal) | `~/.claude/skills/markdown-visuals/` |
+| One project only | `<project>/.claude/skills/markdown-visuals/` |
+
+On Windows, `~` is `C:\Users\<you>`. A running session picks the skill up immediately; restart only
+if you had to create the `skills` directory itself. Claude applies it on its own when writing
+Markdown, and you can invoke it directly with `/markdown-visuals`. From a shell:
+
+```bash
+curl -L -o markdown-visuals.zip https://github.com/IntAnalytic/sentinel-markdown-public/raw/main/skills/markdown-visuals.zip && unzip markdown-visuals.zip -d ~/.claude/skills/
+```
+
+**Any other AI tool** — the same guidance is a paste-ready prompt block in
+[`AUTHORING-FOR-AI.md`](skills/markdown-visuals/references/AUTHORING-FOR-AI.md); drop it into your
+system prompt or custom instructions.
+
 ## Privacy
 
 sentinel-markdown collects **nothing**. There is no telemetry, no analytics, no network access in
