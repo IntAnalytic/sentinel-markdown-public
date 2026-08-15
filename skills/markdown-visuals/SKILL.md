@@ -24,7 +24,10 @@ from HTML/JS widgets (Chart.js, D3, `<canvas>`, `<script>`, `onclick`, iframes),
 - **YAML front-matter** (flat `key: value`) at the very top; `title:` shows as a header.
 - **Math (KaTeX)**: use double-dollar `$$E = mc^2$$` for both inline and display. A single `$` is
   a literal dollar sign (currency like `$100` is safe and won't be parsed as math).
-- **Syntax-highlighted code**: fenced with a language tag (```ts, ```python, ```json, …).
+- **Syntax-highlighted code**: fenced with a language tag (```ts, ```python, …).
+- **Data fences**: fenced blocks labelled `json` / `yaml` / `toml` render in the data viewer
+  with a **Pretty <-> Raw** toggle (JSON Lines needs the explicit `jsonl` label; it is never
+  sniffed). Parsing is offline and non-executing.
 
 ## Diagrams — `mermaid` fence
 
@@ -36,6 +39,11 @@ flowchart LR
 ```
 
 Keep labels short; the diagram auto-adapts to light/dark theme.
+
+Fit: the reading column is ~700px at default zoom; a wider diagram scrolls sideways.
+Sequence diagrams: 3 lifelines or fewer fit without scrolling; keep messages and `note`
+text short (a long note can overflow its box). Tall beats wide: prefer `flowchart TB`
+when there are many nodes.
 
 ## Charts — `chart` (shorthand) or `vega-lite`
 
@@ -51,7 +59,7 @@ optional `series` (color) and `title`:
   "x": "day", "y": "fp" }
 ```
 
-For richer charts (arc/pie, layered, faceted) use a full Vega-Lite v5 spec:
+For richer charts (arc/pie, layered, faceted) use a full Vega-Lite v6 spec:
 
 ```vega-lite
 { "data": { "values": [ {"phase":"Docs","n":6}, {"phase":"AI","n":8} ] },
@@ -59,6 +67,11 @@ For richer charts (arc/pie, layered, faceted) use a full Vega-Lite v5 spec:
   "encoding": { "theta": {"field":"n","type":"quantitative"},
                 "color": {"field":"phase","type":"nominal"} } }
 ```
+
+Sizing: the shorthand fits the reading column automatically. In `vega-lite`, prefer
+`"width": "container"` (fits the column; text keeps its size). A NUMERIC width paints at
+exactly that size and scrolls sideways in a narrow window -- it is never shrunk -- so use
+one only when exact pixels matter.
 
 ## Images / SVG
 

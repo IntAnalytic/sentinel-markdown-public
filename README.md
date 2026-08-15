@@ -9,7 +9,6 @@ live charts, math — but **confined to that folder**: no access elsewhere on di
 in the render path. Safe to point at anything.
 
 [![Get it from the Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-Get%20the%20app-0067b8?logo=microsoft&logoColor=white)](https://apps.microsoft.com/detail/xpfcktgcf2f8dz)
-![platform](https://img.shields.io/badge/platform-Windows-444)
 [![license](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
 
 [![Dark theme: live charts, KaTeX math, document outline, and backlinks](store-screens/01-dark-rendered-charts.png)](store-screens/README.md)

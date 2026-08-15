@@ -34,11 +34,14 @@ WHAT RENDERS
   document header. (Not full YAML — keep it flat.)
 - Math via KaTeX: inline **and** display both use double-dollar — `$$E = mc^2$$`. A single `$`
   is treated as a literal dollar sign (so currency like `$100`/`$2,000` renders normally).
-- Syntax-highlighted code: fenced blocks with a language tag (```ts, ```python, ```json, …),
-  shown with a copy button. Unknown/absent language → plain monospace.
+- Syntax-highlighted code: fenced blocks with a language tag (```ts, ```python, …), shown
+  with a copy button. Unknown/absent language → plain monospace.
+- Data fences: blocks labelled `json` / `yaml` / `toml` render in the data viewer with a
+  Pretty <-> Raw toggle (JSON Lines needs the explicit `jsonl` label; never sniffed).
 
-MERMAID — fence with `mermaid` (flowchart, sequence, gantt, class, state, …). Keep labels short;
-it inherits the light/dark theme:
+MERMAID — fence with `mermaid` (flowchart, sequence, gantt, class, state, …). Keep labels short; it inherits the
+light/dark theme. The reading column is ~700px at default zoom -- a wider diagram scrolls
+sideways, so sequence diagrams fit best with 3 lifelines or fewer and short `note` text:
   ```mermaid
   flowchart LR
     A[Open doc] --> B{In root?}
@@ -55,13 +58,19 @@ CHARTS (data-driven, two options; data MUST be inline — no remote URLs):
      "data": [ {"day":"Mon","fp":28}, {"day":"Tue","fp":209}, {"day":"Wed","fp":49} ],
      "x": "day", "y": "fp" }
    ```
-2) `vega-lite` — full Vega-Lite v5 spec for richer charts (arc/pie, layered, faceted):
+2) `vega-lite` — full Vega-Lite v6 spec for richer charts (arc/pie, layered, faceted):
    ```vega-lite
    { "data": { "values": [ {"phase":"Docs","n":6}, {"phase":"AI","n":8} ] },
      "mark": {"type":"arc","tooltip":true},
      "encoding": { "theta": {"field":"n","type":"quantitative"},
                    "color": {"field":"phase","type":"nominal"} } }
    ```
+
+
+   Sizing: the shorthand fits the reading column automatically. In `vega-lite`, prefer
+   `"width": "container"` (fits the column; text keeps its size). A NUMERIC width paints at
+   exactly that size and scrolls sideways in a narrow window -- it is never shrunk -- so use
+   one only when exact pixels matter.
 
 IMAGES / SVG
 - Reference LOCAL images with relative paths only: `![Alt](charts/fig.svg)` — .svg/.png/.jpg/.gif/.webp,
