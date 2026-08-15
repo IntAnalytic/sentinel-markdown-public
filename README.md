@@ -12,6 +12,10 @@ in the render path. Safe to point at anything.
 ![platform](https://img.shields.io/badge/platform-Windows-444)
 [![license](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
 
+[![Dark theme: live charts, KaTeX math, document outline, and backlinks](store-screens/01-dark-rendered-charts.png)](store-screens/README.md)
+
+*Live charts, math, outline, and backlinks in the dark theme — **[more screenshots →](store-screens/README.md)***
+
 </div>
 
 ---
