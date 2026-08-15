@@ -36,35 +36,45 @@ to an existing issue instead; it genuinely influences prioritization.
 - 📊 **Diagrams & charts** — [Mermaid](https://mermaid.js.org/) blocks, a compact `chart` JSON
   shorthand, full [Vega-Lite](https://vega.github.io/vega-lite/) specs, and inline/referenced SVG.
 - ∑ **Math** — inline and display LaTeX via KaTeX.
-- 🧩 **Data viewer** — `json` / `yaml` / `toml` / `txt` files and data-shaped code fences render
-  with a **Pretty ⟷ Raw** toggle. All parsing is offline and non-executing.
+- 🧩 **Data viewer** — `json` / `jsonl` / `ndjson` / `yaml` / `toml` / `txt` files (plus
+  `.geojson`, `.har`, `.webmanifest`, `.ipynb`, `Cargo.lock`, `poetry.lock`) and data-shaped code
+  fences render with a **Pretty ⟷ Raw** toggle. All parsing is offline and non-executing.
+- 🐘 **Built for scale** — multi-gigabyte logs and datasets open in seconds and scroll smoothly,
+  streamed from disk rather than loaded whole.
 - 🔗 **Wiki-links & backlinks** — `[[Name]]`-style links resolve within the folder, with a
   backlinks panel.
 - 🔎 **Search** — in-document find plus folder-wide full-text search.
-- 🗂️ **Folder navigator** — recursive tree, recents, and live updates as the folder changes on disk.
+- 🗂️ **Folder navigator** — recursive tree with per-type file icons, recents, and live updates as
+  the folder changes on disk.
 - 🧭 **Made to read** — document outline with scroll-spy, source ↔ render split with synced
   scrolling, back/forward history, light/dark themes, whole-UI zoom.
-- 🖨️ **Export & print** — export any document as a single, script-free, self-contained HTML file.
+- 🖨️ **Export & print** — print or save any document as a PDF, or export it as a single,
+  script-free, self-contained HTML file.
 - 🔒 **Confined & sanitized** — the app reads only the open folder and its subfolders; all rendered
   HTML/SVG is allowlist-sanitized under a strict CSP; no scripts run, no remote fetches,
   **no telemetry**.
-- 🖥️ **Windows integration** — opens by double-click as the `.md` handler and registers the
-  **Explorer Preview Pane** for Markdown.
+- 🖥️ **Windows integration** — opens by double-click as the `.md` handler, stands in the
+  **"Open with" list for every format it reads** (your existing defaults are never touched), and
+  registers the **Explorer Preview Pane** for Markdown (MSI installs).
 
 ## Install
 
 **[Microsoft Store](https://apps.microsoft.com/detail/xpfcktgcf2f8dz)** (recommended):
 one-click install with automatic updates.
 
-**Direct download — v1.3.3.** Signed installers; both register the `.md` file association and the
-Explorer Preview Pane:
+**Direct download.** Signed installers for the newest version are on the
+[**Releases**](../../releases) page (also mirrored at
+[iasols.io](https://www.iasols.io/downloads/)), with release notes. Two packages, and they are
+**not interchangeable — install one, never both**:
 
-| Package | GitHub | iasols.io |
-|---|---|---|
-| MSI installer | [Download](../../releases/download/v1.3.3/Sentinel-Markdown_1.3.3_x64_en-US.msi) | [Download](https://www.iasols.io/downloads/Sentinel-Markdown_1.3.3_x64_en-US.msi) |
-| Setup exe (NSIS) | [Download](../../releases/download/v1.3.3/Sentinel-Markdown_1.3.3_x64-setup.exe) | [Download](https://www.iasols.io/downloads/Sentinel-Markdown_1.3.3_x64-setup.exe) |
+| Package | Scope | Admin? | Explorer Preview Pane | Pick it when |
+|---|---|---|---|---|
+| **MSI installer** | per-machine (`Program Files`) | yes | **yes** | you want the preview pane |
+| **Setup exe (NSIS)** | just for you, no elevation | no | no | you cannot elevate |
 
-All versions, with release notes, are on the [**Releases**](../../releases) page.
+Both register the `.md` association; the machine-wide Open-with entries for data types come with
+the MSI. Setup exes older than 1.7.6 have been withdrawn — if you have one installed, update via
+the MSI or the Store rather than running the old uninstaller.
 
 ## Writing Markdown that renders well
 
